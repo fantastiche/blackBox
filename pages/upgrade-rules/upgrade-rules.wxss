@@ -1,0 +1,62 @@
+@import "../../common/common.wxss";
+.rules {
+  background: #fff;
+  padding: 40rpx 0 40rpx 30rpx;
+}
+
+.rules image {
+  height: 80rpx;
+  width: 80rpx;
+  margin-right: 30rpx;
+}
+
+.rules-block {
+  display: flex;
+  padding-bottom: 40rpx;
+}
+
+.rules-block text:nth-child(1) {
+  font-size: 34rpx;
+  color: #333;
+  margin-bottom: 24rpx;
+}
+
+.rules-block text {
+  display: block;
+  font-size: 28rpx;
+  line-height: 42rpx;
+  color: #666;
+}
+
+.experience-point {
+  display: flex;
+  margin-top: 40rpx;
+}
+
+.experience-point text:nth-child(1) {
+  display: block;
+  font-size: 34rpx;
+  color: #333;
+  margin-bottom: 24rpx;
+}
+
+.point {
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-bottom: 40rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.point text:nth-child(1) {
+  display: inline-block;
+  border-radius: 4rpx;
+  width: 60rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: #666;
+  margin-right: 30rpx;
+}

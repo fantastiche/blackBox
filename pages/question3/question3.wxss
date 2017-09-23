@@ -1,0 +1,66 @@
+@import "../../common/common.wxss";
+page {
+  background: #fff;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90rpx;
+}
+
+.title view {
+  color: #333;
+  font-size: 34rpx;
+  padding: 10rpx 30rpx;
+}
+
+.false {
+  color: #999 !important;
+}
+
+.true {
+  font-size: 34rpx !important;
+  color: #000 !important;
+}
+
+.placeholder {
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+
+.topic {
+  padding: 30rpx;
+}
+
+.topic-block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topic-block view {
+  padding: 20rpx 40rpx;
+  font-size: 28rpx;
+  color: #333;
+  border: 1rpx solid #333;
+  margin-right: 20rpx;
+  border-radius: 8rpx;
+  margin-bottom: 16rpx;
+}
+
+.active {
+  background: #333 !important;
+  color: #fff !important;
+}
+
+.other {
+  font-size: 28rpx;
+  color: #333;
+  margin: 60rpx 0;
+}
+
+input {
+  font-size: 28rpx;
+  color: #333;
+}

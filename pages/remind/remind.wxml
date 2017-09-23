@@ -1,0 +1,20 @@
+<template name="remind">
+<view class="wrap"></view>
+<view class="remind">
+    <view class="remind-title border-1px-e5">
+        <view><text>温馨提示</text></view>
+        <image src="../../images/close.png" bindtap="close"></image>
+    </view>
+    <view class="remind-title-info second-word">
+        <view>为践行社区四大原则：</view>
+        <view>真实，前卫，专业，客观。</view>
+        <view>您必须符合以下条件才可以发布测评：</view>
+        <view>1、达到Lv.2级；</view>
+        <view>2、进行专业认证。</view>
+    </view>
+    <view class="remind-title-btn">
+        <button class="btn" bindtap="remind">前往认证</button>
+    </view>
+    <view class="rule" bindtap='turnToRules'>了解升级规则</view>
+</view>
+</template>

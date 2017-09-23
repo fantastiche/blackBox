@@ -1,0 +1,40 @@
+<view class="msg-top border-1px">
+  <view class="mgs-title">
+    <view>
+      <image src="../../images/xiaoxi.png"></image>
+    </view>
+    <view class="msg-title-wrap">
+      <view class="mgs-title-private">
+        <text class="main-word ft-32">私信</text>
+        <view class="msg-num">3</view>
+      </view>
+      <view class="grey-word">御坂美琴：亲爱的 你好，我想问你有没有更好的阿斯顿阿斯顿阿斯顿</view>
+    </view>
+  </view>
+</view>
+
+<view class="msg-content">
+  <view class="msg-content-title">
+    <text class="grey-word">2</text>
+    <text class="grey-word">个未读</text>
+  </view>
+  <view class="msg-content-main {{listLength==index?'border-1px':'border-1px-e5'}}" wx:for="{{msgList}}" wx:for-item="list"
+    wx:key="list">
+    <view>
+      <image src="{{userInfo.avatarUrl}}" class="head-mini"></image>
+    </view>
+    <view class="msg-content-main-wrap">
+      <view class="msg-content-main-user">
+        <text class="ft-32 color-333">{{userInfo.nickName}}</text>
+        <text class="grey-word msg-reply">评论了回答：</text>
+        <view class="dot dot-position"></view>
+      </view>
+      <view class="main-word mt-30">黑盒这么干净，没有广告，靠什么盈利？</view>
+      <view class="main-word mt-16">
+        <text class="before-name no-blod">大橘嗣音：</text>
+        <text>@黑盒秘书 </text>
+        <text class="no-blod">这个问题属于化妆类吗？</text>
+      </view>
+    </view>
+  </view>
+</view>

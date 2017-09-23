@@ -1,0 +1,41 @@
+@import "../../common/common.wxss";
+page {
+  background: #fff;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90rpx;
+}
+
+.title view {
+  color: #333;
+  font-size: 34rpx;
+  padding: 10rpx 30rpx;
+}
+
+.false {
+  color: #999 !important;
+}
+
+.true {
+  font-size: 34rpx !important;
+  color: #000 !important;
+}
+
+.placeholder {
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+
+.question {
+  margin: 30rpx;
+}
+textarea {
+  width: 100%;
+  font-size: 28rpx;
+  color: #333;
+  width: -webkit-calc(100%-60rpx);
+}

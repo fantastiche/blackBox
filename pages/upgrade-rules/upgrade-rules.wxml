@@ -1,0 +1,46 @@
+<view class="rules border-1px">
+  <view class="rules-block border-1px-e5">
+    <image src="../../images/jisuan.png" />
+    <view>
+      <text>经验值算法</text>
+      <text>+ 威尔逊得分</text>
+      <text>+ 转发数</text>
+      <text>+ 阅读数</text>
+      <text>+ 提问数</text>
+    </view>
+  </view>
+  <view class="experience-point">
+    <image src="../../images/dengji.png" />
+    <view>
+      <text>各等级所需经验值</text>
+      <view class="point">
+        <text>Lv.1</text>
+        <text>0 exp</text>
+      </view>
+      <view class="point">
+        <text>Lv.2</text>
+        <text>1000 exp</text>
+      </view>
+      <view class="point">
+        <text>Lv.3</text>
+        <text>4000 exp</text>
+      </view>
+      <view class="point">
+        <text>Lv.4</text>
+        <text>8000 exp</text>
+      </view>
+      <view class="point">
+        <text>Lv.5</text>
+        <text>16000 exp</text>
+      </view>
+      <view class="point">
+        <text>Lv.6</text>
+        <text>32000 exp</text>
+      </view>
+      <view class="point">
+        <text>Lv.7</text>
+        <text>64000 exp</text>
+      </view>
+    </view>
+  </view>
+</view>

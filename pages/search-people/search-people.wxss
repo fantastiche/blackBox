@@ -1,0 +1,76 @@
+@import "../../common/common.wxss";
+page {
+  background: #fff;
+}
+
+.search-question {
+  background: #fff;
+  padding: 0;
+}
+
+.mine-block {
+  background: #fff;
+}
+
+.mine-info-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mine-info {
+  display: flex;
+  flex-grow: 1;
+}
+
+.mine-info-head {
+  width: 110rpx;
+  height: 110rpx;
+  position: relative;
+  margin: 30rpx;
+}
+
+.mine-info .head {
+  width: 110rpx;
+  height: 110rpx;
+  position: absolute;
+  z-index: 999;
+}
+
+.authentication {
+  width: 24rpx;
+  height: 28rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1001;
+}
+
+.mine-info-detail {
+  position: relative;
+}
+
+.mine-info-detail .level {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0 auto 16rpx;
+}
+
+.attention {
+  font-size: 32rpx;
+  color: #fff;
+  padding: 0 40rpx;
+  background: #333;
+  height: 68rpx;
+  line-height: 68rpx;
+  border-radius: 8rpx;
+  margin-right: 30rpx;
+}
+
+.mine-info-detail-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}

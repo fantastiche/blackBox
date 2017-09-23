@@ -1,0 +1,7 @@
+<view class="title border-1px">
+  <view></view>
+  <view class="{{next?'true':'false'}}" bindtap="question">下一步</view>
+</view>
+<view class="question">
+  <textarea placeholder="请填写问题相关描述信息（选填）" placeholder-class="placeholder" bindinput="bindKeyInput" />
+</view>

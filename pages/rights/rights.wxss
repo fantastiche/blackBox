@@ -1,0 +1,35 @@
+@import "../../common/common.wxss";
+.rights {
+  margin-top: 20rpx;
+  padding-left: 30rpx;
+  background: #fff;
+}
+
+.rights-block {
+  display: flex;
+  font-size: 28rpx;
+  color: #333;
+  align-items: center;
+  padding: 30rpx 0;
+}
+
+.rights-block text {
+  display: inline-block;
+  border-radius: 4rpx;
+  width: 60rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: #666;
+  margin-right: 30rpx;
+}
+
+.rights-block view view {
+  margin-bottom: 14rpx;
+}
+
+.rights-block view view:last-child {
+  margin-bottom: 0;
+}

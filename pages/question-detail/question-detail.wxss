@@ -1,0 +1,97 @@
+@import "../../common/common.wxss";
+.dynamic-info {
+  background: #fff;
+}
+
+.dynamic-info-main {
+  padding: 30rpx;
+}
+
+.dynamic-info-title {
+  display: flex;
+  align-items: center;
+}
+
+.dynamic-info-title image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.dynamic-info-title-word {
+  font-size: 24rpx;
+  color: #888;
+}
+
+.dynamic-info-title-word text:last-child {
+  color: #333
+}
+
+.dynamic-info-main-detail {
+  margin: 24rpx 0 0 0;
+}
+
+.dynamic-info-before {
+  background: #fff;
+  padding: 30rpx 30rpx;
+  font-size: 28rpx;
+}
+
+.dynamic-info-before-detail {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.dynamic-info-before-ctrl {
+  margin-top: 10rpx;
+}
+
+.dynamic-info-other {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: right;
+  padding-right: 30rpx;
+}
+
+.dynamic-info-other text {
+  margin-left: 40rpx;
+}
+
+.question-control {
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+  background: #fff;
+  padding: 20rpx 0;
+  margin-bottom: 10rpx;
+}
+
+.question-control view {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.question-control view:nth-child(1) {
+  border-right: 1rpx solid #e5e5e5
+}
+
+.question-control view image {
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 16rpx;
+}
+
+.question-control view text {
+  font-size: 30rpx;
+  color: #000;
+}
+
+.answer {
+  padding-top: 10rpx;
+}

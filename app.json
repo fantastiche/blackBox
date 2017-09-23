@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/attestation/attestation",
+    
+    
+    "pages/answer/answer",
+    "pages/search-people/search-people",
+    "pages/question-detail/question-detail",
+    "pages/evaluation-detail/evaluation-detail",
+    "pages/evaluation/evaluation",
+    "pages/community/community",
+    "pages/question3/question3",
+    "pages/question2/question2",
+    "pages/question/question",
+    
+    "pages/rights/rights",
+    "pages/upgrade-rules/upgrade-rules",
+    "pages/mine-edit/mine-edit",
+    "pages/mine/mine",
+    "pages/myMsg/myMsg",
+    "pages/remind/remind"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "黑盒",
+    "navigationBarTextStyle": "#fff"
+  }
+}

@@ -1,0 +1,7 @@
+<view class="title border-1px">
+  <view bindtap="cancel">取消</view>
+  <view class="{{next?'true':'false'}}" bindtap="question">下一步</view>
+</view>
+<view class="question">
+  <textarea placeholder="请写下你的问题并用问号结尾" placeholder-class="placeholder" bindinput="bindKeyInput" />
+</view>

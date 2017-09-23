@@ -1,0 +1,14 @@
+<view class="title border-1px">
+  <view></view>
+  <view class="{{next?'true':'false'}}" bindtap="publish">发布</view>
+</view>
+<view class="topic">
+  <view class="topic-block">
+    <view class="{{list.active?'active':''}}" wx:for="{{blockList}}" wx:for-item="list" wx:key="list" data-index="{{index}}"
+      bindtap="active">{{list.title}}</view>
+  </view>
+  <view class="other">或者</view>
+  <view>
+    <input class="border-1px" bindinput="bindKeyInput" type="text" placeholder="输入话题" placeholder-class="placeholder" />
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<view class="mine-edit-top">
+  <view class="mine-edit-head">
+    <image src="{{userInfo.avatarUrl}}" class="head" />
+    <text class="block">编辑</text>
+  </view>
+  <view class="mine-edit-base">
+    <input value="{{userInfo.nickName}}" type="text" class="border-1px-e5" />
+    <input type="text" placeholder="一句话介绍自己" placeholder-class="placeholder" class="border-1px-e5" />
+    <text>例如：职业化妆师/美业商品达人</text>
+  </view>
+</view>
+
+<view class="mine-edit-detail">
+  <input type="text" placeholder="个人简介 （用一段话介绍自己）" placeholder-class="placeholder address" class="border-1px-e5" />
+  <view class="actionSheet border-1px-e5">
+    <text class="blod">性别</text>
+    <view bindtap="chooseSex">女</view>
+  </view>
+  <input type="text" placeholder="添加居住信息" placeholder-class="placeholder add-bg" class="border-1px-e5 mt-40" />
+  <input type="text" placeholder="添加教育信息" placeholder-class="placeholder add-bg" class="border-1px-e5 mt-40" />
+  <view class="actionSheet border-1px-e5 mt-40">
+    <text class="blod">所在行业</text>
+    <view bindtap='chooseVocation'>无</view>
+  </view>
+</view>
+
+<view class="sub">
+  <button>完成</button>
+</view>

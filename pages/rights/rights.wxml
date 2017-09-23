@@ -1,0 +1,41 @@
+<view class="rights border-1px">
+  <view class="rights-block border-1px-e5">
+    <text>Lv.2</text>
+    <view>可以发布测评内容</view>
+  </view>
+  <view class="rights-block border-1px-e5">
+    <text>Lv.3</text>
+    <view>
+      <view>千千氏大学化妆课程学习名额 （免费）</view>
+      <view>线下门店试炼</view>
+    </view>
+  </view>
+  <view class="rights-block border-1px-e5">
+    <text>Lv.4</text>
+    <view>
+      <view>参加化妆师测评大赛</view>
+      <view>化妆服务LBS推送</view>
+    </view>
+  </view>
+  <view class="rights-block border-1px-e5">
+    <text>Lv.5</text>
+    <view>
+      <view>创业信贷</view>
+      <view>众筹开店名额</view>
+    </view>
+  </view>
+  <view class="rights-block border-1px-e5">
+    <text>Lv.6</text>
+    <view>
+      <view>签约千千氏</view>
+      <view>专属直播间</view>
+      <view>产品试用权</view>
+    </view>
+  </view>
+  <view class="rights-block">
+    <text>Lv.7</text>
+    <view>IP股权化资格</view>
+  </view>
+</view>
+
+<view class="grey-word mt-30 ml-30">温馨提示：以上权益的入口需私信黑盒秘书获取</view>

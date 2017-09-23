@@ -1,0 +1,211 @@
+@import "../../common/common.wxss";
+.mine-top {
+  background: #fff;
+}
+
+.mine-info-wrap {
+  margin-left: 30rpx;
+  padding: 30rpx 30rpx 20rpx 0;
+}
+
+.mine-info {
+  display: flex;
+}
+
+.mine-info-head {
+  width: 110rpx;
+  height: 110rpx;
+  position: relative;
+}
+
+.mine-info .head {
+  width: 110rpx;
+  height: 110rpx;
+  position: absolute;
+  z-index: 999;
+}
+
+.authentication {
+  width: 24rpx;
+  height: 28rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1001;
+}
+
+.mine-info-detail {
+  position: relative;
+}
+
+.mine-info-detail .level {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0 auto 16rpx;
+}
+
+.mine-info-intro {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between
+}
+
+.mine-info-intro-text text:nth-child(1) {
+  font-size: 28rpx;
+  color: #888;
+  margin-right: 30rpx;
+}
+
+.mine-info-intro-text text:nth-child(2) {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.mine-info-intro-edit image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.mine-info-num {
+  display: flex;
+}
+
+.msg {
+  flex-grow: 1;
+  padding: 0 30rpx;
+  margin: 30rpx 0;
+  text-align: center;
+  height: 100rpx;
+  border-right: 1rpx solid #e5e5e5;
+}
+
+.msg:last-child {
+  border: none;
+}
+
+.msg text {
+  display: block;
+}
+
+.msg text:nth-child(1) {
+  margin-bottom: 20rpx;
+}
+
+.main-num {
+  font-size: 36rpx;
+}
+
+.mine-ctrl-first {
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.mine-ctrl-wrap {
+  padding-right: 30rpx;
+  margin-left: 30rpx;
+}
+
+.mine-ctrl-block {
+  height: 90rpx;
+  line-height: 90rpx;
+  padding-right: 30rpx;
+  font-size: 28rpx;
+  color: #888;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAaCAMAAACw0Z1uAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAPFBMVEUAAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMwAAAABBVCOAAAAEnRSTlMA5cUP28kc3M8V09niJOQOvuMvoq6wAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAFBJREFUGNN10EkOwCAMBEEIW9jB/39srm5QfCvJAs8Y+zijxkvQjkneTBe40Pl2jXSCA+1ut04P7blk/5LLfIof8QweyQgMyPgs56juKJa1f5PWBLNXAOSzAAAAAElFTkSuQmCC')no-repeat center right;
+  background-size: 14rpx 26rpx;
+}
+
+.mine-ctrl-block-title text {
+  font-size: 28rpx;
+  color: #333;
+  margin-left: 60rpx;
+}
+
+.mine-ctrl-block-title image {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.mine-ctrl-second {
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.mine-ctrl-second .mine-ctrl-wrap {
+  margin-left: 0;
+  padding-left: 30rpx;
+}
+
+.mine-ctrl-third {
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.mine-ctrl-third .mine-ctrl-block {
+  background: #fff;
+  padding-right: 0;
+}
+
+.mine-ctrl-right text {
+  font-size: 24rpx;
+  color: #888;
+}
+
+.mine-ctrl-right image {
+  width: 21rpx;
+  height: 24rpx;
+  margin-right: 16rpx;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
+}
+
+.mine-ctrl-right {
+  position: relative;
+  padding-left: 37rpx;
+}
+.mine-right {
+  padding: 30rpx;
+}
+
+.mine-right text {
+  position: absolute;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333;
+  top: 0;
+  bottom: 0;
+  left: 60rpx;
+  margin: auto 0;
+}
+
+.right {
+  height: 36rpx;
+  line-height: 36rpx;
+  position: relative;
+}
+
+.li-dot {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  content: '';
+  width: 8rpx;
+  height: 8rpx;
+  background: #333;
+  border-radius: 50%;
+}

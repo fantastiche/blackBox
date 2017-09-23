@@ -1,0 +1,61 @@
+@import "../../common/common.wxss";
+
+/*认证弹框样式*/
+
+.remind {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1001;
+    margin: auto;
+    width: 540rpx;
+    height: 600rpx;
+    background: #fff;
+    border-radius: 4px;
+    padding: 0 30rpx;
+}
+
+.remind-title {
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    position: relative;
+    font-size: 36rpx;
+    color: #333;
+    font-weight: bold;
+}
+
+.remind-title image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.remind-title-info {
+    margin: 30rpx 0 60rpx 0;
+}
+
+.remind-title-info view:nth-child(2) {
+    margin-bottom: 30rpx;
+}
+
+.remind-title-btn button {
+    width: 100%;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 32rpx;
+}
+
+.rule {
+    text-align: right;
+    font-size: 24rpx;
+    color: #576b95;
+    height: 78rpx;
+    line-height: 78rpx;
+}
