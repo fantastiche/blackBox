@@ -1,0 +1,19 @@
+@import "../../common/common.wxss";
+.mine-answer {
+  margin-top: 20rpx;
+  padding: 30rpx;
+  background: #fff;
+}
+
+.mine-answer-content {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 42rpx;
+  margin-top: 30rpx;
+}
+
+.mine-answer-other {
+  font-size: 24rpx;
+  color: #888;
+  margin-top: 30rpx;
+}

@@ -7,82 +7,22 @@
     取消
   </view>
 </view>
-<view class="mine-block">
+<view class="mine-block" wx:for="{{list}}" wx:for-item="list" wx:key="list" >
   <view class="mine-info-wrap">
     <view class="mine-info">
       <view class="mine-info-head">
-        <image src="{{userInfo.avatarUrl}}" class="head" />
+        <image src="{{list.headimgurl}}" class="head" />
         <image src="../../images/renzheng.png" class="authentication" />
       </view>
       <view class="mine-info-detail-wrap border-1px-e5">
         <view class="ml-30">
           <view class="mine-info-detail">
-            <text class="ft-34 color-333">{{userInfo.nickName}}</text>
-            <view class="level">Lv.7</view>
+            <text class="ft-34 color-333">{{list.nickname}}</text>
+            <view class="level">Lv.{{list.level}}</view>
           </view>
-          <text class="grey-word mt-10 block">化妆评测话题优秀回答者</text>
+          <text class="grey-word mt-10 block">{{list.synopsis}}</text>
         </view>
-        <view class="attention">邀请</view>
-      </view>
-    </view>
-  </view>
-</view>
-<view class="mine-block">
-  <view class="mine-info-wrap">
-    <view class="mine-info">
-      <view class="mine-info-head">
-        <image src="{{userInfo.avatarUrl}}" class="head" />
-        <image src="../../images/renzheng.png" class="authentication" />
-      </view>
-      <view class="mine-info-detail-wrap border-1px-e5">
-        <view class="ml-30">
-          <view class="mine-info-detail">
-            <text class="ft-34 color-333">{{userInfo.nickName}}</text>
-            <view class="level">Lv.7</view>
-          </view>
-          <text class="grey-word mt-10 block">化妆评测话题优秀回答者</text>
-        </view>
-        <view class="attention">邀请</view>
-      </view>
-    </view>
-  </view>
-</view>
-<view class="mine-block">
-  <view class="mine-info-wrap">
-    <view class="mine-info">
-      <view class="mine-info-head">
-        <image src="{{userInfo.avatarUrl}}" class="head" />
-        <image src="../../images/renzheng.png" class="authentication" />
-      </view>
-      <view class="mine-info-detail-wrap border-1px-e5">
-        <view class="ml-30">
-          <view class="mine-info-detail">
-            <text class="ft-34 color-333">{{userInfo.nickName}}</text>
-            <view class="level">Lv.7</view>
-          </view>
-          <text class="grey-word mt-10 block">化妆评测话题优秀回答者</text>
-        </view>
-        <view class="attention">邀请</view>
-      </view>
-    </view>
-  </view>
-</view>
-<view class="mine-block">
-  <view class="mine-info-wrap">
-    <view class="mine-info">
-      <view class="mine-info-head">
-        <image src="{{userInfo.avatarUrl}}" class="head" />
-        <image src="../../images/renzheng.png" class="authentication" />
-      </view>
-      <view class="mine-info-detail-wrap border-1px-e5">
-        <view class="ml-30">
-          <view class="mine-info-detail">
-            <text class="ft-34 color-333">{{userInfo.nickName}}</text>
-            <view class="level">Lv.7</view>
-          </view>
-          <text class="grey-word mt-10 block">化妆评测话题优秀回答者</text>
-        </view>
-        <view class="attention">邀请</view>
+        <view class="attention" bindtap="attention" data-id="{{list.id}}">邀请</view>
       </view>
     </view>
   </view>

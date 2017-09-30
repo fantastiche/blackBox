@@ -1,0 +1,29 @@
+<view class="search border-1px">
+  <view class="search-block">
+    <image src="../../images/search.png" mode="" binderror="" bindload="" />
+    <text>搜索你想邀请的人</text>
+  </view>
+  <view class="search-question" bindtap="cancel">
+    取消
+  </view>
+</view>
+<view class="mine-block" wx:for="{{list}}" wx:for-item="list" wx:key="list" data-id="{{list.id}}">
+  <view class="mine-info-wrap">
+    <view class="mine-info">
+      <view class="mine-info-head">
+        <image src="{{list.headimgurl}}" class="head" />
+        <image src="../../images/renzheng.png" class="authentication" wx:if="{{list.auth===1}}" />
+      </view>
+      <view class="mine-info-detail-wrap border-1px-e5">
+        <view class="ml-30">
+          <view class="mine-info-detail">
+            <text class="ft-34 color-333">{{list.nickname}}</text>
+            <view class="level">Lv.{{list.level}}</view>
+          </view>
+          <text class="grey-word mt-10 block">{{list.industry}}</text>
+        </view>
+        <view class="attention" catchtap="msg" data-id="{{list.id}}">私信TA</view>
+      </view>
+    </view>
+  </view>
+</view>

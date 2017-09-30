@@ -1,13 +1,13 @@
 <view class="title border-1px">
   <view bindtap="cancel">取消</view>
-  <view class="evaluation {{next?'true':'false'}}" bindtap="publish">
+  <view class="evaluation {{next?'true':'false'}}">
     <view class="{{anonymity?'anonymity':''}}" bindtap="checkAnonymity"></view>
     <text>匿名</text>
-    <button>发布</button>
+    <button bindtap="publish">发布</button>
   </view>
 </view>
 <view class="question-title border-1px-e5">
-  <input type="text" placeholder="起个标题吧？（10~50字之间）" placeholder-class="placeholder" />
+  <input type="text" placeholder="起个标题吧？（10~50字之间）" bindinput="getTitle" placeholder-class="placeholder" />
 </view>
 <view class="question-wrap">
   <view class="clean">
@@ -15,7 +15,7 @@
   </view>
   <view class="question border-1px-e5">
     <textarea placeholder="温馨提示：请珍惜测评者自己的账号，谨遵以下原则进行内容发布：真实、前卫、专业、客观" placeholder-class="placeholder" bindinput="bindKeyInput"
-      value="{{questionDescript}}" maxlength="-1" bindinput="getValue" />
+      value="{{questionDescript}}" maxlength="-1" bindinput="getDescript" />
   </view>
 </view>
 <view class="video-wrap border-1px">

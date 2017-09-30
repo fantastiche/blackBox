@@ -59,6 +59,15 @@ page {
     border-radius: 50%;
 }
 
+.authentication {
+    width: 24rpx;
+    height: 28rpx;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1001;
+}
+
 .block {
     display: block;
 }
@@ -154,14 +163,25 @@ page {
 }
 
 .second-word {
-    font-size: 28rpx;
-    line-height: 42rpx;
+    font-size: 28rpx !important;
+    line-height: 42rpx !important;
     color: #333;
 }
 
 .grey-word {
     font-size: 24rpx;
     color: #888;
+}
+
+.rich-text-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rich-text-image image {
+    width: 100%;
+    height: auto;
 }
 
 .main-num {

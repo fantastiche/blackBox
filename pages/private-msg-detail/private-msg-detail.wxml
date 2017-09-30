@@ -1,0 +1,50 @@
+<view class="private-wrap">
+  <view wx:for="{{list}}" wx:for-item="list" wx:key="list">
+    <view class="private-content-other" wx:if="{{list.type==='0'&&list.other===1}}">
+      <view class="private-content-head">
+        <image src="{{list.headimgurl}}" binderror="" bindload="" class="head-mini"></image>
+      </view>
+      <view class="private-content-block">
+        <image src="../../images/jiao2.png" class="coner"></image>
+        <text>{{list.content}}</text>
+      </view>
+      <view class="time-right">{{list.createtime}}</view>
+    </view>
+    <view class="private-content-other" wx:if="{{list.type==='1'&&list.other===1}}">
+      <view class="private-content-head">
+        <image src="{{list.headimgurl}}" binderror="" bindload="" class="head-mini"></image>
+      </view>
+      <view class="private-content-block">
+        <image src="../../images/jiao2.png" class="coner"></image>
+        <image class="msg-img" src="{{list.content}}" mode="aspectFit"></image>
+      </view>
+      <view class="time-right">{{list.createtime}}</view>
+    </view>
+    <view class="private-content-mine" wx:if="{{list.type==='0'&&list.other===0}}">
+      <view class="private-content-block-mine">
+        <image src="../../images/jiao1.png" class="coner-mine"></image>
+        <text>{{list.content}}</text>
+      </view>
+      <view class="private-content-head">
+        <image src="{{list.headimgurl}}" binderror="" bindload="" class="head-mini"></image>
+      </view>
+      <view class="time-left">{{list.createtime}}</view>
+    </view>
+    <view class="private-content-mine" wx:if="{{list.type==='1'&&list.other===0}}">
+      <view class="private-content-block-mine">
+        <image src="../../images/jiao1.png" class="coner-mine"></image>
+        <image class="msg-img" src="{{list.content}}" mode="aspectFit"></image>
+      </view>
+      <view class="private-content-head">
+        <image src="{{list.headimgurl}}" binderror="" bindload="" class="head-mini"></image>
+      </view>
+      <view class="time-left">{{list.createtime}}</view>
+    </view>
+  </view>
+</view>
+<view class="pravite-msg-control-wrap">
+  <view class="pravite-msg-control">
+    <input value="{{inputValue}}" placeholder-class="placeholder" placeholder="请输入私信内容" type="text" bindinput="input"></input>
+    <image src="../../images/msg-pic.png" bindtap='send'></image>
+  </view>
+</view>

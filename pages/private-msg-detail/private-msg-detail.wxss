@@ -1,0 +1,137 @@
+@import "../../common/common.wxss";
+.head-mini {
+  height: 70rpx;
+  width: 70rpx;
+}
+
+.coner {
+  width: 10rpx;
+  height: 20rpx;
+  position: absolute;
+  top: 20rpx;
+  left: -9rpx;
+}
+
+.coner-mine {
+  width: 10rpx;
+  height: 20rpx;
+  position: absolute;
+  top: 20rpx;
+  right: -9rpx;
+}
+
+.private-wrap {
+  margin-bottom: 130rpx;
+}
+
+.private-content-other {
+  padding: 40rpx 20rpx 0 20rpx;
+  width: calc(100%-40rpx);
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.private-content-mine {
+  padding: 40rpx 20rpx 0 20rpx;
+  width: calc(100%-40rpx);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.private-content-block {
+  margin-left: 20rpx;
+  background: #fff;
+  position: relative;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  width: 420rpx;
+  word-break: break-all;
+  min-height: 50rpx;
+}
+
+.private-content-block text {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+
+.private-content-block-mine {
+  margin-right: 20rpx;
+  background: #f4d47e;
+  position: relative;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  min-height: 50rpx;
+  width: 420rpx;
+  word-break: break-all;
+}
+
+.private-content-block-mine text {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+
+.time-right {
+  color: #888;
+  font-size: 24rpx;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: 20rpx;
+}
+
+.time-left {
+  color: #888;
+  font-size: 24rpx;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 20rpx;
+}
+
+.msg-img {
+  width: 420rpx;
+  height: 420rpx;
+}
+
+.pravite-msg-control-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.pravite-msg-control {
+  height: 80rpx;
+  padding: 10rpx 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  border-top: 1rpx #dbdbdb solid;
+}
+
+.pravite-msg-control input {
+  border: 1rpx solid #e5e5e5;
+  background: #fff;
+  padding: 10rpx 16rpx;
+  margin-right: 30rpx;
+  border-radius: 8rpx;
+  flex-grow: 1;
+  color: #333;
+  font-size: 24rpx;
+}
+
+.pravite-msg-control image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.placeholder {
+  font-size: 24rpx;
+  color: #b2b2b2;
+}

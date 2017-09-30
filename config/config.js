@@ -3,7 +3,9 @@ var api = {
   // 请求协议
   protocol: 'http',
   // 请求域名
-  host: '119.23.27.158:8088', //测试
+  // host: 'cs1.gzqqs.com/app', //测试
+  // host:'192.168.9.224/blackbox', //俊伟后台
+  host: '192.168.9.223:8080/blackbox', //李军后台
   //host: 'http://cs1.gzqqs.com', //正式
   // 基础路径
   basePath: ''

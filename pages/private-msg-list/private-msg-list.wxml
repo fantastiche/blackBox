@@ -1,0 +1,17 @@
+<view class="msg-content">
+  <view class="msg-content-main {{listLength==index?'border-1px':'border-1px-e5'}}" wx:for="{{msgList}}" wx:for-item="list"
+    wx:key="list">
+    <view>
+      <image src="http://wx.qlogo.cn/mmopen/cHn1ebIpCyyMHWraDL5hroFf027LGSKzb9icwpgUSxbORjibqqCL0oueobPt18NJGibyRylJeITT1nwO2Wn8Y50bklPOMuxhaiaO/0"
+        class="head-mini"></image>
+    </view>
+    <view class="msg-content-main-wrap">
+      <view class="msg-content-main-user">
+        <text class="ft-32 color-333">asdasd</text>
+        <text class="grey-word msg-reply">悄悄对你说：</text>
+        <view class="dot dot-position"></view>
+      </view>
+      <view class="second-word mt-30">黑盒这么干净，没有广告，靠什么盈利？</view>
+    </view>
+  </view>
+</view>

@@ -12,9 +12,19 @@
   align-items: center;
 }
 
-.dynamic-info-title image {
+.dynamic-info-head {
   width: 80rpx;
   height: 80rpx;
+  position: relative;
+}
+
+.dynamic-info-head .head {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.level {
+  margin-left: 0;
 }
 
 .dynamic-info-title-word {

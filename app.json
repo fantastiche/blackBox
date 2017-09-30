@@ -1,23 +1,28 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/attestation/attestation",
-    
-    
-    "pages/answer/answer",
-    "pages/search-people/search-people",
+    "pages/private-msg-detail/private-msg-detail",
+    "pages/member-list/member-list",
+    "pages/member/member",
+    "pages/mine-evaluation/mine-evaluation",
+    "pages/mine-answer/mine-answer",
+    "pages/question-list/question-list",
+    "pages/private-msg-list/private-msg-list",
+    "pages/question2/question2",
     "pages/question-detail/question-detail",
+    "pages/mine/mine",
+    "pages/attestation/attestation",
+    "pages/answer-detail/answer-detail",
+    "pages/answer-add/answer-add",
+    "pages/search-people/search-people",
     "pages/evaluation-detail/evaluation-detail",
     "pages/evaluation/evaluation",
     "pages/community/community",
     "pages/question3/question3",
-    "pages/question2/question2",
     "pages/question/question",
-    
     "pages/rights/rights",
     "pages/upgrade-rules/upgrade-rules",
     "pages/mine-edit/mine-edit",
-    "pages/mine/mine",
     "pages/myMsg/myMsg",
     "pages/remind/remind"
   ],

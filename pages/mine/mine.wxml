@@ -2,21 +2,21 @@
   <view class="mine-info-wrap border-1px-e5">
     <view class="mine-info">
       <view class="mine-info-head">
-        <image src="{{userInfo.avatarUrl}}" class="head" />
+        <image src="{{mine.member.headimgurl}}" class="head" />
         <image src="../../images/renzheng.png" class="authentication" />
       </view>
       <view class="ml-30">
         <view class="mine-info-detail">
-          <text class="ft-34 color-333">{{userInfo.nickName}}</text>
-          <view class="level">Lv.7</view>
+          <text class="ft-34 color-333">{{mine.member.nickname}}</text>
+          <view class="level">Lv.{{mine.member.level}}</view>
         </view>
-        <text class="grey-word block">化妆评测话题优秀回答者</text>
+        <text class="+grey-word block">化妆评测话题优秀回答者</text>
       </view>
     </view>
     <view class="mine-info-intro">
       <view class="mine-info-intro-text">
         <text>个人简介</text>
-        <text>隐藏职业圣骑士</text>
+        <text>{{mine.member.synopsis}}</text>
       </view>
       <view class="mine-info-intro-edit" bindtap='edit'>
         <image src="../../images/bianji.png"></image>
@@ -24,50 +24,50 @@
     </view>
   </view>
   <view class="mine-info-num border-1px">
-    <view class="msg">
-      <text class="main-num">200</text>
+    <view class="msg" bindtap='fans'>
+      <text class="main-num">{{mine.fansnum}}</text>
       <text class="grey-word">粉丝</text>
     </view>
-    <view class="msg">
-      <text class="main-num">37</text>
+    <view class="msg" bindtap='follows'>
+      <text class="main-num">{{mine.follownum}}</text>
       <text class="grey-word">我关注的人</text>
     </view>
-    <view class="msg">
-      <text class="main-num">101</text>
+    <view class="msg" bindtap='fans'>
+      <text class="main-num">{{mine.concernnum}}</text>
       <text class="grey-word">我关注的问题</text>
     </view>
-    <view class="msg">
-      <text class="main-num">348</text>
+    <view class="msg" bindtap='fans'>
+      <text class="main-num">{{mine.collectionnum}}</text>
       <text class="grey-word">我的收藏</text>
     </view>
   </view>
 </view>
 <view class="mine-ctrl-first border-1px">
-  <view class="mine-ctrl-wrap border-1px-e5">
+  <view class="mine-ctrl-wrap border-1px-e5" bindtap="myEvaluation">
     <view class="mine-ctrl-block">
       <view class="mine-ctrl-block-title">
         <image src="../../images/ceping.png"></image>
         <text>我的测评</text>
       </view>
-      <view>25</view>
+      <view>{{mine.articlenum}}</view>
     </view>
   </view>
-  <view class="mine-ctrl-wrap border-1px-e5">
+  <view class="mine-ctrl-wrap border-1px-e5" bindtap="myQuestion">
     <view class="mine-ctrl-block">
       <view class="mine-ctrl-block-title">
         <image src="../../images/tiwen.png"></image>
         <text>我的提问</text>
       </view>
-      <view>3</view>
+      <view>{{mine.questionnum}}</view>
     </view>
   </view>
-  <view class="mine-ctrl-wrap">
+  <view class="mine-ctrl-wrap" bindtap="myAnswer">
     <view class="mine-ctrl-block">
       <view class="mine-ctrl-block-title">
         <image src="../../images/huida.png"></image>
         <text>我的回答</text>
       </view>
-      <view>7</view>
+      <view>{{mine.answernum}}</view>
     </view>
   </view>
 </view>
@@ -83,4 +83,3 @@
   </view>
 
 </view>
-

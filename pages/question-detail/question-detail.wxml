@@ -10,48 +10,52 @@
 <view class="dynamic-info border-1px-e5">
   <view class="dynamic-info-main">
     <view class="dynamic-info-title">
-      <image src="{{userInfo.avatarUrl}}" class="head" />
+      <view class="dynamic-info-head">
+        <image src="{{data.headimgurl}}" class="head" />
+        <image src="../../images/renzheng.png" class="authentication" />
+      </view>
+
       <view class="ml-30">
         <view class="person-info-detail">
-          <text class="ft-32 color-333">{{userInfo.nickName}}</text>
-          <view class="level">Lv.7</view>
+          <text class="ft-32 color-333">{{data.nickName}}</text>
+          <view class="level">Lv.{{data.level}}</view>
         </view>
         <view class="grey-word dynamic-info-title-word">
-          <text>09-01 20:59</text>
           <text class="ml-30">话题：</text>
-          <text>护肤品</text>
+          <text>{{data.type}}</text>
         </view>
       </view>
     </view>
     <view class="dynamic-info-main-detail main-word">
-      <text>日本哪些化妆品护肤品特别好？马上去旅游了，未使用过的绕道，勿推。</text>
+      <text>{{data.title}}</text>
+      <rich-text class="dynamic-info-main-detail-content second-word" nodes="{{nodes}}"></rich-text>
     </view>
   </view>
   <view class="dynamic-info-other grey-word">
-    <text>200 关注</text>
-    <text>12 回答</text>
-    <text>关注问题</text>
+    <text>{{data.concernNum}} 关注</text>
+    <text>{{data.answerNum}} 回答</text>
+    <text catchtap="attention">{{attentionText}}</text>
   </view>
 </view>
 <view class="question-control">
-  <view>
+  <view bindtap="invite">
     <image src="../../images/yaoqing.png" mode="" binderror="" bindload="" />
     <text>邀请回答</text>
   </view>
-  <view>
+  <view bindtap="answer">
     <image src="../../images/tianjiahuida.png" mode="" binderror="" bindload="" />
     <text>添加回答</text>
   </view>
 </view>
-<view class="answer" wx:for="{{list}}" wx:for-item="list" wx:key="list">
+<view class="answer" wx:for="{{answerList}}" wx:for-item="answerList" wx:key="answerList" bindtap="answerDetail" data-index="{{index}}">
   <view class="dynamic-info-before">
     <view class="dynamic-info-before-detail">
-      <text class="before-name">大橘嗣音：</text>
-      <text class="second-word">我是一名专业的化妆师，基本化妆箱里都是一些日系化妆品。首先给大家看一下我的化妆箱【图片】现在我和各位详细说一下每一款产品的心得。1：rmk粉</text>
+      <text class="before-name">{{answerList.nickname}}：</text>
+      <text class="second-word">{{answerList.content}}</text>
     </view>
     <view class="dynamic-info-before-ctrl">
-      <view class="praise {{list.praise==1?'praise-on':''}}" bindtap="praise" data-index='{{index}}' animation="{{list.animationData}}">1,191</view>
-      <view class="reply ml-30">228</view>
+      <view class="praise praise-on">{{answerList.praiseNum}}</view>
+      <view class="reply ml-30">{{answerList.commentNum}}</view>
     </view>
   </view>
 </view>

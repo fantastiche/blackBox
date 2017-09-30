@@ -1,0 +1,50 @@
+<view class="search border-1px-e5">
+  <view class="search-block">
+    <image src="../../images/search.png" mode="" binderror="" bindload="" />
+    <text>搜贴 搜达人 搜话题</text>
+  </view>
+  <view class="search-question" bindtap="question">
+    提问
+  </view>
+</view>
+<view class="main-word question-text">
+  <text>{{data.title}}</text>
+</view>
+<view class="mine-block">
+  <view class="mine-info-wrap border-1px-e5">
+    <view class="mine-info">
+      <view class="mine-info-head">
+        <image src="{{data.headimgurl}}" class="head" />
+        <image src="../../images/renzheng.png" class="authentication" />
+      </view>
+      <view class="ml-30">
+        <view class="mine-info-detail">
+          <text class="ft-34 color-333">{{data.nickname}}</text>
+          <view class="level">Lv.{{data.level}}</view>
+        </view>
+        <text class="grey-word mt-10 block">化妆评测话题优秀回答者</text>
+      </view>
+    </view>
+    <view class="attention">关注</view>
+  </view>
+</view>
+<view class="answer-detail">
+  <rich-text class="second-word" nodes="{{nodes}}"></rich-text>
+</view>
+<view class="bottom-ctrl">
+  <view class="no-good {{agree.status===1?'good':''}}" bindtap="praise" animation="{{agree.animationData}}">
+    <text>赞同 1100</text>
+  </view>
+  <view class="no-against {{oppose.status===1?'against':''}}" bindtap="against" animation="{{oppose.animationData}}">
+    <text>反对 1100</text>
+  </view>
+  <view class="no-collecte {{collection.status===1?'collecte':''}}" bindtap="collecte" animation="{{collection.animationData}}">
+    <text wx:if="{{collection.status==0}}">收藏</text>
+    <text wx:if="{{collection.status==1}}">已收藏</text>
+  </view>
+  <view class="comment">
+    <text>评论 68</text>
+  </view>
+</view>
+<import src="../../components/wetoast/wetoast.wxml" />
+<template is="wetoast" data="{{...__wetoast__}}" />

@@ -1,11 +1,29 @@
 var indexModel = require('/models/index-model.js')
+let {WeToast} = require('components/wetoast/wetoast.js')
 //app.js
 App({
+  WeToast,
   onLaunch: function () {
     //调用API从本地缓存中获取数据
-
+    // this.wxLogin()
   },
-  login: function (f) {
+  getUserInfo: function (cb) {
+    var that = this
+    if (this.globalData.userInfo) {
+      typeof cb == "function" && cb(this.globalData.userInfo)
+    } else {
+      //调用登录接口
+      wx.getUserInfo({
+        withCredentials: false,
+        success: function (res) {
+          that.globalData.userInfo = res.userInfo
+          typeof cb == "function" && cb(that.globalData.userInfo)
+        }
+      })
+    }
+  },
+  wxLogin: function () {
+    var that = this
     wx.login({
       success: function (res) {
         if (res.code) {
@@ -23,13 +41,9 @@ App({
               console.log(res);
               wx.setStorageSync('OPENID', 'opeN1w3-kC6QqceDUuGiPApDi-5c')
               var req = {
-                OPENID: 'opeN1w3-kC6QqceDUuGiPApDi-5c'
+                openId: 'opeN1w3-kC6QqceDUuGiPApDi-5c'
               }
-              indexModel.login(req, function (data) {
-                wx.setStorageSync('TOKEN', data.data.pd.token)
-                wx.setStorageSync('MEMBERID', data.data.pd.id)
-                f(data.data.pd.token)
-              }, function () { })
+              that.login(req)
             }
           })
         } else {
@@ -38,22 +52,15 @@ App({
       }
     });
   },
-  getUserInfo: function (cb) {
-    var that = this
-    if (this.globalData.userInfo) {
-      typeof cb == "function" && cb(this.globalData.userInfo)
-    } else {
-      //调用登录接口
-      wx.getUserInfo({
-        withCredentials: false,
-        success: function (res) {
-          that.globalData.userInfo = res.userInfo
-          typeof cb == "function" && cb(that.globalData.userInfo)
-        }
-      })
-    }
+  login: function (params) {
+    indexModel.login(params, function (data) {
+      wx.setStorageSync('TOKEN', data.data.pd.token)
+      wx.setStorageSync('MEMBERID', data.data.pd.id)
+      if (getCurrentPages().length != 0) {
+        getCurrentPages()[getCurrentPages().length - 1].onLoad()
+      }
+    }, function () { })
   },
-
   globalData: {
     userInfo: null
   }
