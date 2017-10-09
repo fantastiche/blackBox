@@ -92,8 +92,8 @@ Page({
     var url = requester.structureApiUrl(apiConfig.member.attestation.path)
     var formData = {
       'memberId': that.data.id,
-      'openId': that.data.openId,
-      'token': that.data.token,
+      // 'openId': that.data.openId,
+      // 'token': that.data.token,
       'type': 'authentication'
     }
     var file

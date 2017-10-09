@@ -82,12 +82,12 @@ Page({
   },
   myEvaluation: function () {
     wx.navigateTo({
-      url: "../mine-evaluation/mine-evaluation"
+      url: "../evaluation-list/evaluation-list?id=" + this.data.id
     })
   },
   myAnswer: function () {
     wx.navigateTo({
-      url: "../mine-answer/mine-answer"
+      url: "../answer-list/answer-list?id=" + this.data.id
     })
   },
   myQuestion: function () {

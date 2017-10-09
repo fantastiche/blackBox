@@ -3,14 +3,14 @@
     <view class="mine-info">
       <view class="mine-info-head">
         <image src="{{mine.member.headimgurl}}" class="head" />
-        <image src="../../images/renzheng.png" class="authentication" />
+        <image src="../../images/renzheng.png" class="authentication" wx:if="{{mine.auth===1}}" />
       </view>
       <view class="ml-30">
         <view class="mine-info-detail">
           <text class="ft-34 color-333">{{mine.member.nickname}}</text>
           <view class="level">Lv.{{mine.member.level}}</view>
         </view>
-        <text class="+grey-word block">化妆评测话题优秀回答者</text>
+        <text class="+grey-word block">{{mine.member.introduce}}</text>
       </view>
     </view>
     <view class="mine-info-intro">

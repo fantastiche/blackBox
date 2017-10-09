@@ -3,6 +3,7 @@ var questionModel = require('../../models/question-model.js')
 var apiConfig = require('../../config/api-config.js')
 var storageConfig = require('../../config/storage-config.js')
 var requester = require('../../utils/api-util.js')
+var app = getApp()
 Page({
   data: {
     addFlag: false,
@@ -24,6 +25,7 @@ Page({
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
+    new app.WeToast()
     var that = this
     try {
       var openId = wx.getStorageSync('OPENID')
@@ -62,14 +64,6 @@ Page({
       that.setData({
         next: true,
         list: that.data.list
-      })
-    }
-  },
-  // 下一步
-  question: function () {
-    if (this.data.next) {
-      wx.navigateTo({
-        url: "../question3/question3"
       })
     }
   },
@@ -196,6 +190,7 @@ Page({
 
     wx.chooseImage({
       count: 1,
+      sourceType: ['album', 'camera'],
       success: function (res) {
         console.log(res)
         that.data.list.splice(index + 1, 0, {
@@ -227,8 +222,8 @@ Page({
     var url = requester.structureApiUrl(apiConfig.common.uploadPicture.path)
     var formData = {
       'memberId': that.data.id,
-      'openId': that.data.openId,
-      'token': that.data.token,
+      // 'openId': that.data.openId,
+      // 'token': that.data.token,
       'type': 'question'
     }
     that.data.list.forEach(function (e, index, arry) {
@@ -249,14 +244,23 @@ Page({
                 'memberId': that.data.id,
                 'openId': that.data.openId,
                 'token': that.data.token,
-                'title': 'asdasdas',
+                'title': wx.getStorageSync('title'),
                 'content': JSON.stringify(that.data.nodes),
-                'type': '化妆品',
+                'type': wx.getStorageSync('topic'),
                 'anonymous': 0
               }
               console.log(that.data.nodes)
               questionModel.add(params, function (res) {
-                console.log(res)
+                if (res.result === '100') {
+                  wx.redirectTo({
+                    url: '../index/index'
+                  })
+                } else {
+                  that.wetoast.toast({
+                    title: res.message,
+                    img: '../../images/Warning.png',
+                  })
+                }
               }, function () { })
             } else {
               that.upload()
@@ -280,7 +284,16 @@ Page({
           }
           console.log(that.data.nodes)
           questionModel.add(params, function (res) {
-            console.log(res)
+            if (res.result === '100') {
+              wx.redirectTo({
+                url: '../index/index'
+              })
+            } else {
+              that.wetoast.toast({
+                title: res.message,
+                img: '../../images/Warning.png',
+              })
+            }
           }, function () { })
         }
       }

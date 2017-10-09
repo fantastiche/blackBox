@@ -2,73 +2,74 @@
   <view class="mine-info-wrap border-1px-e5">
     <view class="mine-info">
       <view class="mine-info-head">
-        <image src="{{mine.member.headimgurl}}" class="head" />
+        <image src="{{member.member.headimgurl}}" class="head" />
         <image src="../../images/renzheng.png" class="authentication" />
       </view>
       <view class="ml-30">
         <view class="mine-info-detail">
-          <text class="ft-34 color-333">{{mine.member.nickname}}</text>
-          <view class="level">Lv.{{mine.member.level}}</view>
+          <text class="ft-34 color-333">{{member.member.nickname}}</text>
+          <view class="level">Lv.{{member.member.level}}</view>
         </view>
-        <text class="+grey-word block">化妆评测话题优秀回答者</text>
+        <text class="+grey-word block">{{member.member.introduce}}</text>
       </view>
     </view>
     <view class="mine-info-intro">
       <view class="mine-info-intro-text">
         <text>个人简介</text>
-        <text>{{mine.member.synopsis}}</text>
+        <text>{{member.member.synopsis}}</text>
       </view>
-      <view class="mine-info-intro-edit" bindtap='edit'>
-        <image src="../../images/bianji.png"></image>
-      </view>
+    </view>
+    <view class="member-control">
+      <button>私信{{sex}}</button>
+      <button>+ 关注</button>
     </view>
   </view>
+
   <view class="mine-info-num border-1px">
-    <view class="msg">
-      <text class="main-num">{{mine.fansnum}}</text>
+    <view class="msg" bindtap="fans">
+      <text class="main-num">{{member.fansnum}}</text>
       <text class="grey-word">粉丝</text>
     </view>
-    <view class="msg">
-      <text class="main-num">{{mine.follownum}}</text>
-      <text class="grey-word">我关注的人</text>
+    <view class="msg" bindtap="follows">
+      <text class="main-num">{{member.follownum}}</text>
+      <text class="grey-word">{{sex}}关注的人</text>
     </view>
     <view class="msg">
-      <text class="main-num">{{mine.concernnum}}</text>
-      <text class="grey-word">我关注的问题</text>
+      <text class="main-num">{{member.concernnum}}</text>
+      <text class="grey-word">{{sex}}关注的问题</text>
     </view>
     <view class="msg">
-      <text class="main-num">{{mine.collectionnum}}</text>
-      <text class="grey-word">我的收藏</text>
+      <text class="main-num">{{member.collectionnum}}</text>
+      <text class="grey-word">{{sex}}的收藏</text>
     </view>
   </view>
 </view>
 <view class="mine-ctrl-first border-1px">
-  <view class="mine-ctrl-wrap border-1px-e5">
+  <view class="mine-ctrl-wrap border-1px-e5" bindtap="evaluation">
     <view class="mine-ctrl-block">
       <view class="mine-ctrl-block-title">
         <image src="../../images/ceping.png"></image>
-        <text>我的测评</text>
+        <text>{{sex}}的测评</text>
       </view>
-      <view>{{mine.articlenum}}</view>
+      <view>{{member.articlenum}}</view>
     </view>
   </view>
-  <view class="mine-ctrl-wrap border-1px-e5">
+  <view class="mine-ctrl-wrap border-1px-e5" bindtap="question">
     <view class="mine-ctrl-block">
       <view class="mine-ctrl-block-title">
         <image src="../../images/tiwen.png"></image>
-        <text>我的提问</text>
+        <text>{{sex}}的提问</text>
       </view>
-      <view>{{mine.questionnum}}</view>
+      <view>{{member.questionnum}}</view>
     </view>
   </view>
-  <view class="mine-ctrl-wrap">
+  <view class="mine-ctrl-wrap" bindtap="answer">
     <view class="mine-ctrl-block">
       <view class="mine-ctrl-block-title">
         <image src="../../images/huida.png"></image>
-        <text>我的回答</text>
+        <text>{{sex}}的回答</text>
       </view>
-      <view>{{mine.answernum}}</view>
+      <view>{{member.answernum}}</view>
     </view>
   </view>
 </view>
-

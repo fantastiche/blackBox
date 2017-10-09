@@ -1,13 +1,13 @@
 <view class="picture" bindtap="choose" data-index="1">
-  <image src="../../images/camera.png" mode="" binderror="" bindload=""></image>
+  <image src="../../images/camera.png" mode="" binderror="" bindload="" class="icon"></image>
 </view>
 <view class="title">请上传化妆师，美容师，美妆博主号、达人证明</view>
 <view class="picture" bindtap="choose"data-index="2">
-  <image src="../../images/camera.png" mode="" binderror="" bindload=""></image>
+  <image src="../../images/camera.png" mode="" binderror="" bindload="" class="icon"></image>
 </view>
 <view class="title">请上传身份证正面照</view>
 <view class="picture" bindtap="choose"data-index="3">
-  <image src="../../images/camera.png" mode="" binderror="" bindload=""></image>
+  <image src="../../images/camera.png" mode="" binderror="" bindload="" class="icon"></image>
 </view>
 <view class="title">请上传身份证背面照</view>
 <view class="attestation-sub" bindtap="sub">

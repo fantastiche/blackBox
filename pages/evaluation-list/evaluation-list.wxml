@@ -1,0 +1,27 @@
+<view class="mine-evaluation mt-20" wx:for="{{list}}" wx:for-item="list" wx:key="list" data-id="{{list.id}}">
+  <view class="dynamic-info-title">
+    <image src="http://wx.qlogo.cn/mmopen/cHn1ebIpCyyMHWraDL5hroFf027LGSKzb9icwpgUSxbORjibqqCL0oueobPt18NJGibyRylJeITT1nwO2Wn8Y50bklPOMuxhaiaO/0"
+      class="head" />
+    <view class="ml-30">
+      <view class="person-info-detail">
+        <text class="ft-32 color-333">asdf</text>
+        <view class="level">Lv.7</view>
+      </view>
+      <view class="grey-word dynamic-info-title-word">
+        <text>{{list.createtime}}</text>
+        <text class="ml-30">话题：</text>
+        <text>asd</text>
+      </view>
+    </view>
+  </view>
+  <view class="main-word mt-20">
+    {{list.content}}
+  </view>
+  <view class="mine-evaluation-video">
+    <video src="{{list.url}}" binderror=""></video>
+  </view>
+  <view class="dynamic-info-before-ctrl">
+    <view class="praise {{list.praise==1?'praise-on':''}}" bindtap="praise" data-index='{{index}}' animation="{{list.animationData}}">1,191</view>
+    <view class="reply ml-30">22</view>
+  </view>
+</view>

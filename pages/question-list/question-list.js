@@ -10,9 +10,8 @@ Page({
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
     var that = this
-    // type值（0:我的问题;1:他人的问题)
     var openId = wx.getStorageSync('OPENID')
-    var id = wx.getStorageSync('MEMBERID')
+    var id = options.id
     var token = wx.getStorageSync('TOKEN')
     console.log(options)
     that.setData({
@@ -22,42 +21,13 @@ Page({
       token: token
     })
 
-    switch (that.data.type) {
-      case '0': {
-        var params = {
-          id: that.data.id,
-          openId: that.data.openId,
-          token: that.data.token,
-          page: 1
-        }
-        that.getMyList(params)
-        break;
-      }
-      case '1': {
-        var params = {
-          id: that.data.id,
-          openId: that.data.openId,
-          token: that.data.token,
-          page: 1
-        }
-        that.getMyFollowsList(params)
-        break;
-      }
-      case '2': {
-        var params = {
-          id: id
-        }
-        that.getMyFansList(params)
-        break;
-      }
-      case '3': {
-        var params = {
-          id: id
-        }
-        that.getMyFansList(params)
-        break;
-      }
+    var params = {
+      id: that.data.id,
+      openId: that.data.openId,
+      token: that.data.token,
+      page: 1
     }
+    that.getList(params)
   },
   onReady: function () {
     // 页面渲染完成
@@ -71,8 +41,8 @@ Page({
   onUnload: function () {
     // 页面关闭
   },
-  // 我的问题列表
-  getMyList: function (params) {
+  // 问题列表
+  getList: function (params) {
     var that = this
     questionModel.list(params, function (res) {
       that.data.list = res.list
@@ -87,18 +57,11 @@ Page({
       })
     }, function () { })
   },
-  // 他人的问题列表
-  getOtherList: function (params) {
+  detail: function (e) {
     var that = this
-    mineModel.fans(params, function (res) {
-      // that.data.list = res.list
-      // that.data.list.forEach(function (e, index, array) {
-      //   that.data.list[index].nickname = unescape(e.nickname.replace(/\\/g, "%"))
-      //   that.data.list[index].industry = unescape(e.industry.replace(/\\/g, "%"))
-      // }, this);
-      that.setData({
-        list: that.data.list
-      })
-    }, function () { })
-  },
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '../question-detail/question-detail?id=' + id
+    })
+  }
 })

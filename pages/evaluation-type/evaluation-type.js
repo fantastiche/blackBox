@@ -10,12 +10,12 @@ Page({
       { title: '美发', active: false },
     ],
     topic: '',
-    title: ''
+    topicInput: ''
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
     wx.setNavigationBarTitle({
-      title: '请至少选择一个话题'
+      title: '请选择一个话题'
     })
   },
   onReady: function () {
@@ -30,31 +30,18 @@ Page({
   onUnload: function () {
     // 页面关闭
   },
-  // 获取输入
-  titleInput: function (e) {
-    var that = this
-
-    this.setData({
-      title: e.detail.value,
-    })
-    if (that.data.title && that.data.topic) {
-      that.setData({
-        next: true
-      })
-    } else {
-      that.setData({
-        next: false
-      })
-    }
-  },
   // 下一步
   question: function () {
     var that = this
+    if (that.data.topicInput) {
+      that.setData({
+        topic: that.data.topicInput
+      })
+    }
     if (this.data.next) {
-      wx.setStorageSync('title', that.data.title)
       wx.setStorageSync('topic', that.data.topic)
       wx.navigateTo({
-        url: "../question2/question2"
+        url: "../evaluation/evaluation"
       })
     }
   },
@@ -70,28 +57,34 @@ Page({
 
     if (that.data.blockList[index].active) {
       that.data.blockList[index].active = false
+      that.setData({
+        next: false,
+        topicInput: ''
+      })
     } else {
       that.data.blockList.forEach(function (element) {
         element.active = false
       }, this);
       that.data.blockList[index].active = true
       that.setData({
+        topicInput: '',
         topic: that.data.blockList[index].title
       })
+      if (that.data.topic) {
+        that.setData({
+          next: true
+        })
+      } else {
+        that.setData({
+          next: false
+        })
+      }
     }
 
     that.setData({
       blockList: that.data.blockList,
     })
-    if (that.data.title && that.data.topic) {
-      that.setData({
-        next: true
-      })
-    } else {
-      that.setData({
-        next: false
-      })
-    }
+
   },
   // 获取输入
   bindKeyInput: function (e) {
@@ -102,9 +95,9 @@ Page({
     }, this);
     this.setData({
       blockList: that.data.blockList,
-      topic: e.detail.value,
+      topicInput: e.detail.value,
     })
-    if (that.data.title && that.data.topic) {
+    if (that.data.topic) {
       that.setData({
         next: true
       })
@@ -114,4 +107,5 @@ Page({
       })
     }
   }
+
 })

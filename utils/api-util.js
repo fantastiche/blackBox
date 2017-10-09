@@ -17,7 +17,7 @@ var storageConfig = require('../config/storage-config.js')
  * 构建接口请求url
  * @param  {string} path 接口地址
  * @return {string}      构建后的完整接口url
- */
+ */ 
 function structureApiUrl(path) {
   var url = configs.api.protocol + '://' + configs.api.host + configs.api.basePath + path
   return url

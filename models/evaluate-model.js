@@ -16,10 +16,17 @@ function add(params, successCallback, failCallback) {
         successCallback(res.data);
     })
 }
-
+// 测评详情
+function detail(params, successCallback, failCallback) {
+    var api = apiConfig.evaluate.detail;
+    requester.wxRequest(api, params, function (res) {
+        successCallback(res.data);
+    })
+}
 // 上传视频
 
 module.exports = {
     list: list,
-    add: add
+    add: add,
+    detail: detail
 }

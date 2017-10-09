@@ -13,8 +13,13 @@ page {
   background: #f5f5f5;
   border: 2rpx dashed #ddd;
 }
-
+/*
 .picture image {
+  width: 160rpx;
+  height: 160rpx;
+}*/
+
+.icon {
   width: 160rpx;
   height: 160rpx;
 }

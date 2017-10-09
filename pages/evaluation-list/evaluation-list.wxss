@@ -1,0 +1,42 @@
+@import "../../common/common.wxss";
+.mt-20:nth-child(1) {
+  margin-top: 0
+}
+
+.mine-evaluation {
+  background: #fff;
+  padding: 30rpx;
+}
+
+.dynamic-info-title {
+  display: flex;
+  align-items: center;
+}
+
+.dynamic-info-title image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.dynamic-info-title-word {
+  font-size: 24rpx;
+  color: #888;
+}
+
+.dynamic-info-title-word text:last-child {
+  color: #333
+}
+
+.mine-evaluation-video {
+  margin-top: 30rpx;
+  height: 400rpx;
+}
+
+.mine-evaluation-video video {
+  width: 100%;
+  height: 400rpx;
+}
+
+.dynamic-info-before-ctrl {
+  margin-top: 15rpx;
+}

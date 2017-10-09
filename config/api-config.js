@@ -15,8 +15,12 @@ var common = {
     method: 'POST'
   },
   index: {
-    path: '/appIndex/index.do',
+    path: '/index/home.do',
     method: 'POST'
+  },
+  community: {
+    path: '/index/community',
+    method: 'GET'
   },
   // 视频上传
   uploadVideo: {
@@ -29,14 +33,18 @@ var common = {
     method: 'POST'
   }
 }
-// ==评测==
+// ==评测== 
 var evaluate = {
   add: {
-    path: '/appProduct/release.do',
+    path: '/evaluation/release.do',
     method: 'GET'
   },
   list: {
     path: '/profile/:id/evaluations',
+    method: 'GET'
+  },
+  detail: {
+    path: '/evaluation/{id}',
     method: 'GET'
   }
 }

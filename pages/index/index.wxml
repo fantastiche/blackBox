@@ -32,7 +32,7 @@
     <view class="dynamic-title-wrap border-1px">
         <view class="dynamic-title">
             <text>动态</text>
-            <text>进入社区</text>
+            <text bindtap="community">进入社区</text>
         </view>
     </view>
     <view class="dynamic-info mb-20" wx:for="{{list}}" wx:for-item="list" wx:key="list" bindtap="toQuestionDetail" data-id="{{list.id}}">

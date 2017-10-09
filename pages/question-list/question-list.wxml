@@ -1,4 +1,4 @@
-<view class="mine-answer" wx:for="{{list}}" wx:for-item="list" wx:key="list" data-id="{{list.id}}">
+<view class="mine-answer" wx:for="{{list}}" wx:for-item="list" wx:key="list" data-id="{{list.id}}" bindtap="detail">
   <view class="main-word">{{list.title}}</view>
   <view class="mine-answer-other">{{list.praiseNum}} 赞同<view class="blank"></view>•<view class="blank"></view>{{list.createtime}}</view>
 </view>

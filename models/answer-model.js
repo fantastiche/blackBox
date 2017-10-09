@@ -16,6 +16,13 @@ function detail(params, successCallback, failCallback) {
         successCallback(res.data);
     })
 }
+// 回答列表
+function list(params, successCallback, failCallback) {
+    var api = apiConfig.answer.list;
+    requester.wxRequest(api, params, function (res) {
+        successCallback(res.data);
+    })
+}
 // 赞同
 function agree(params, successCallback, failCallback) {
     var api = apiConfig.answer.agree;
@@ -84,5 +91,6 @@ module.exports = {
     collection: collection,
     collectionCancel: collectionCancel,
     invitedList: invitedList,
-    invite: invite
+    invite: invite,
+    list: list
 }
